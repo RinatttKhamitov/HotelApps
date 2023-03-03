@@ -38,7 +38,9 @@
             this.radioBtnDischarged = new System.Windows.Forms.RadioButton();
             this.radioBtnAll = new System.Windows.Forms.RadioButton();
             this.groupBoxNumber = new System.Windows.Forms.GroupBox();
+            this.lableId = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +53,7 @@
             this.labelDateArrival = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelDateDeparture = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewRooms = new System.Windows.Forms.DataGridView();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNumberRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +65,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.TimeLbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.lableId = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBoxNumber.SuspendLayout();
@@ -73,10 +73,10 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -208,6 +208,16 @@
             this.groupBoxNumber.TabStop = false;
             this.groupBoxNumber.Text = "Номер: ";
             // 
+            // lableId
+            // 
+            this.lableId.AutoSize = true;
+            this.lableId.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.lableId.Location = new System.Drawing.Point(113, 20);
+            this.lableId.Name = "lableId";
+            this.lableId.Size = new System.Drawing.Size(19, 17);
+            this.lableId.TabIndex = 2;
+            this.lableId.Text = "Id";
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -226,6 +236,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 265);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.button1.Location = new System.Drawing.Point(77, 235);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 25);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Просмотр карточки";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -350,6 +371,16 @@
             this.labelDateDeparture.Size = new System.Drawing.Size(0, 17);
             this.labelDateDeparture.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HotelApps.Properties.Resources.no_avatar;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // dataGridViewRooms
             // 
             this.dataGridViewRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -471,37 +502,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.button1.Location = new System.Drawing.Point(77, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Просмотр карточки";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lableId
-            // 
-            this.lableId.AutoSize = true;
-            this.lableId.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.lableId.Location = new System.Drawing.Point(113, 20);
-            this.lableId.Name = "lableId";
-            this.lableId.Size = new System.Drawing.Size(19, 17);
-            this.lableId.TabIndex = 2;
-            this.lableId.Text = "Id";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HotelApps.Properties.Resources.no_avatar;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,12 +526,12 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
