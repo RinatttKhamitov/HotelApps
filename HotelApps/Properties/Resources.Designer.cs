@@ -69,5 +69,32 @@ namespace HotelApps.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 1;Кошелев Казимир Георгьевич;10.11.2004;VISA;10;16/02/2023;22/02/2023
+        ///2;Жданов Ростислав Романович;5.2.2003;MIR;2;3/02/2023;5/02/2023
+        ///3;Горбачёв Богдан Германович;21.6.2004;MIR;3;4/02/2023;7/02/2023
+        ///4;Кононов Григорий Максович;6.11.1999;cash;0;5/02/2023;4/02/2023
+        ///5;Горбунов Мстислав Авксентьевич;23.5.2002;VISA;1;4/02/2023;5/02/2023.
+        /// </summary>
+        internal static string resident {
+            get {
+                return ResourceManager.GetString("resident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 1;101;Зарезервировано;1 
+        ///2;102;Занято;2
+        ///3;103;Занято;5
+        ///4;104;Свободно;0
+        ///5;201;Занято;3
+        ///6;202;Выписываются;4.
+        /// </summary>
+        internal static string rooms {
+            get {
+                return ResourceManager.GetString("rooms", resourceCulture);
+            }
+        }
     }
 }

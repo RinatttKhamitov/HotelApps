@@ -17,11 +17,11 @@ namespace HotelApps
         public Form2(string idPerson)
         {
             InitializeComponent();
-            StreamReader f = new StreamReader("table/resident.txt");
-            while (!f.EndOfStream)
+            string[] f = Properties.Resources.resident.Split(new char[] { '\n' });
+            foreach (string c in f)
             {
                 // баг первый чел не показывает
-                string[] s = f.ReadLine().Split(new char[] { ';' });
+                string[] s = c.Split(new char[] { ';' });
                 if (s[0].Equals(idPerson))
                 {
                     label6.Text = s[1];
@@ -34,7 +34,6 @@ namespace HotelApps
                 }
 
             }
-            f.Close();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

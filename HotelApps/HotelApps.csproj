@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Properties\img\no-avatar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resident.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rooms.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

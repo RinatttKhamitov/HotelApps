@@ -21,10 +21,11 @@ namespace HotelApps
             //timer1.Interval = 1000;
 
             // асинхронное чтение
-            StreamReader f = new StreamReader("table/rooms.txt");
-            while (!f.EndOfStream)
+
+            string[] f = Properties.Resources.rooms.Split(new char[] { '\n' });
+            foreach (string c in f)
             {
-                string[] s = f.ReadLine().Split(new char[] { ';' });
+                string[] s = c.Split(new char[] { ';' });
                 DataGridViewRow row = (DataGridViewRow)dataGridViewRooms.Rows[0].Clone();
                 row.Cells[0].Value = s[0];
                 row.Cells[1].Value = s[1];
@@ -34,7 +35,6 @@ namespace HotelApps
                 // что-нибудь делаем с прочитанной строкой s
 
             }
-            f.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -109,13 +109,12 @@ namespace HotelApps
 
         private void dataGridViewRooms_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            StreamReader f = new StreamReader("table/resident.txt");
-            while (!f.EndOfStream)
+            string[] f = Properties.Resources.resident.Split(new char[] { '\n' });
+            foreach (string c in f)
             {
 
                 // баг первый чел не показывает
-                string[] s = f.ReadLine().Split(new char[] { ';' });
+                string[] s = c.Split(new char[] { ';' });
                 if (dataGridViewRooms[3, dataGridViewRooms.CurrentCell.RowIndex].Value == null)
                 {
                     continue;
@@ -132,7 +131,6 @@ namespace HotelApps
                 }
 
             }
-            f.Close();
 
 
         }
